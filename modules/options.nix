@@ -27,12 +27,12 @@ with lib.my;
   config = {
     user = {
       # Used by KDE Plasma as display name on lockscreen
-      description = "Matthias Thym";
+      description = "Joris van Breugel";
       extraGroups = [ "wheel" ];
       isNormalUser = true;
       name = let name = builtins.getEnv "USER"; in
              if elem name [ "" "root" ]
-             then "mathym" else name;
+             then "joris" else name;
       uid = 1000;
     };
 

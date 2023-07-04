@@ -45,7 +45,7 @@ with inputs;
   };
 
   system.configurationRevision = mkIf (self ? rev) self.rev;
-  system.stateVersion = mkDefault "22.11";
+  system.stateVersion = mkDefault "23.05";
 
   ## Some reasonable, global defaults
   # This is here to appease 'nix flake check' for generic hosts with no
@@ -79,7 +79,7 @@ with inputs;
   nix.gc = {
     automatic = mkDefault true;
     dates = mkDefault "weekly";
-    options = mkDefault "--delete-older-than 30d";
+    options = mkDefault "--delete-older-than 7d";
   };
 
   # Do not start a sulogin shell if mounting a filesystem fails
